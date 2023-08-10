@@ -19,7 +19,7 @@
 {
   font-size: 1.6rem;
   min-width: 350px;
-  height: 40px;
+  min-height: 40px;
   border-radius: 15px;
   text-align: center;
   padding-left: 15px;
