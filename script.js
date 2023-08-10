@@ -29,9 +29,7 @@ function success(position)
     let country=data.results[0].components.country;
     document.querySelector(".btn").innerHTML=`City : ${city}, State : ${state}, District : ${district} , Country : ${country}`;
   })
-  .catch(()=>{
-    document.querySelector(".btn").innerHTML="Something went wrong"
-  })
+  
 
 }
 
