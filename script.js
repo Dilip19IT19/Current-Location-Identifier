@@ -29,23 +29,25 @@ function success(position)
     let country=data.results[0].components.country;
     document.querySelector(".btn").innerHTML=`City : ${city}, State : ${state}, District : ${district} , Country : ${country}`;
   })
-  
+  .catch(()=>{
+    document.querySelector(".btn").innerHTML="Something went wrong"
+  })
 
 }
 
 function error(err)
 {
-  if(err.code==1)
+  if(err.code===1)
   {
     document.querySelector(".btn").innerHTML=err.message;
   }
-  else if(err.code==2)
+  else if(err.code===2)
   {
     document.querySelector(".btn").innerHTML="Location is not available❗"
   }
   else
   {
-    document.querySelector(".btn").innerHTML="Something went wrong"
+    document.querySelector(".btn").innerHTML=err.message;
   }
   document.querySelector(".btn").setAttribute("disabled","true");
 }
